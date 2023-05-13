@@ -1,0 +1,2 @@
+load_data runtime is 514.542 seconds 
+ 

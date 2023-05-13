@@ -1,0 +1,17 @@
+version : '3'
+services:
+     database:
+       container_name: postgre_dat
+       ports :
+         - 5432:5432
+       environment :
+          POSTGRES_DB : lr1_dat
+          Postgres_PASWORD : 123321
+          Postgres_USER : user1
+       restart: always
+       image : postgres:15.2-alpine
+     app:
+       build: ./app
+       depends_on:
+         - database
+
